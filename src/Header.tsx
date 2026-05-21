@@ -3,11 +3,12 @@
 function Header () {
   return (
     <div id="header">
-      <span className="logo icon fa-paper-plane"></span>
-      <h1>Hi. This is Directive.</h1>
-      <p>A responsive HTML5 + CSS3 site template designed by <a href="http://html5up.net">HTML5 UP</a>
+      <span className="logo icon fa-archway"></span>
+      <h1>Ryan Eavis</h1>
+      <h1>Traditional Stone Mason</h1>
+      <p>Stone shaped by hand, set for generations.
       <br />
-      and released for free under the <a href="http://html5up.net/license">Creative Commons license</a>.</p>
+      Specializing in natural stone construction and restoration.</p>
     </div>
   );
 }
