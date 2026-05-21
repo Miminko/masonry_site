@@ -1,0 +1,189 @@
+/*
+  Masonry site theme — warm neutral base + moss accent
+  Loaded after main.css
+*/
+
+:root {
+  --stone-bg: #f6f5f1;
+  --stone-text: #5c5a56;
+  --stone-heading: #2e2c2a;
+  --stone-border: #c8c4bc;
+  --stone-moss: #4a5d4f;
+  --stone-moss-hover: #6b7f6e;
+  --stone-moss-dark: #3a4a3e;
+  --stone-clay: #8b7355;
+  --stone-footer: #2e2c2a;
+}
+
+/* Base */
+
+body {
+  background-color: var(--stone-bg) !important;
+  color: var(--stone-text) !important;
+}
+
+a {
+  color: var(--stone-moss) !important;
+}
+
+a:hover {
+  color: var(--stone-moss-hover) !important;
+}
+
+strong,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--stone-heading) !important;
+}
+
+/* Buttons */
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button {
+  background: var(--stone-moss) !important;
+  color: #ffffff !important;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:hover {
+  background: var(--stone-moss-hover) !important;
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active,
+.button:active {
+  background: var(--stone-moss-dark) !important;
+}
+
+.button.alt {
+  color: var(--stone-moss) !important;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--stone-moss) !important;
+}
+
+/* Feature sections */
+
+.feature:before {
+  background: var(--stone-border) !important;
+}
+
+.feature .image {
+  aspect-ratio: 4 / 3;
+  background-color: var(--stone-border);
+}
+
+.feature .image img {
+  inset: 0;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+/* Header — template angular SVG, no center guide lines */
+
+#header:before,
+#header:after {
+  display: none !important;
+}
+
+#header a {
+  color: var(--stone-moss) !important;
+}
+
+#header a:hover {
+  color: var(--stone-moss-hover) !important;
+}
+
+#header h1,
+#header h2,
+#header h3,
+#header h4,
+#header h5,
+#header h6,
+#header p,
+#header strong,
+#header b {
+  color: var(--stone-heading) !important;
+}
+
+#header .logo {
+  background: var(--stone-moss) !important;
+  color: #ffffff !important;
+}
+
+#header input[type="submit"],
+#header input[type="reset"],
+#header input[type="button"],
+#header .button {
+  color: var(--stone-heading) !important;
+}
+
+/* Footer */
+
+#footer {
+  background-color: var(--stone-footer) !important;
+  background-image: none !important;
+  margin-top: 0 !important;
+  padding: 4em 0 6em 0 !important;
+}
+
+#footer:before {
+  display: none !important;
+}
+
+#footer input[type="submit"],
+#footer input[type="reset"],
+#footer input[type="button"],
+#footer .button {
+  color: var(--stone-moss) !important;
+}
+
+#footer input[type="submit"]:hover,
+#footer input[type="reset"]:hover,
+#footer input[type="button"]:hover,
+#footer .button:hover {
+  color: #ffffff !important;
+}
+
+@media screen and (max-width: 1280px) {
+  #footer {
+    background-image: none !important;
+    margin-top: 0 !important;
+    padding: 4em 0 5em 0 !important;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .feature .image {
+    aspect-ratio: 16 / 10;
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  .feature .image img {
+    position: relative !important;
+  }
+
+  #footer {
+    padding: 3em 0 3em 0 !important;
+  }
+}

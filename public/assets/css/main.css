@@ -2642,7 +2642,7 @@ input, select, textarea {
 			}
 
 		.feature:before {
-			background: blue;
+			background: #c8c4bc;
 			content: '';
 			display: inline-block;
 			height: 100%;
@@ -2705,53 +2705,38 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		background-attachment: scroll,							scroll,					fixed;
-		background-image: url("images/top-3200.svg"), url("images/overlay.png"), url("../../images/header.jpg");
-		background-position: bottom center,					top left,				center center;
-		background-repeat: repeat-x,						repeat,					no-repeat;
-		background-size: 3200px 460px,					auto,					cover;
-		color: rgba(255, 255, 255, 0.8);
+		background-attachment: scroll;
+		background-color: #f6f5f1;
+		background-image: url("images/top-3200.svg");
+		background-position: bottom center;
+		background-repeat: repeat-x;
+		background-size: 3200px 460px;
+		color: #5c5a56;
 		padding: 10em 0 20em 0;
 		position: relative;
 		text-align: center;
 	}
 
 		#header:before, #header:after {
-			background: rgba(224, 224, 224, 0.75);
-			content: '';
-			left: 50%;
-			position: absolute;
-			width: 1px;
-			z-index: 0;
-		}
-
-		#header:before {
-			height: calc(100% - 50px);
-			opacity: 0.15;
-			top: 0;
-		}
-
-		#header:after {
-			bottom: 0;
-			height: 50px;
+			display: none;
 		}
 
 		#header a {
-			border-bottom-color: rgba(255, 255, 255, 0.35);
-			color: rgba(255, 255, 255, 0.8);
+			border-bottom-color: rgba(74, 93, 79, 0.35);
+			color: #4a5d4f;
 		}
 
 			#header a:hover {
 				border-bottom-color: transparent;
-				color: #4eb980;
+				color: #6b7f6e;
 			}
 
 		#header strong, #header b {
-			color: #ffffff;
+			color: #2e2c2a;
 		}
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
-			color: #ffffff;
+			color: #2e2c2a;
 		}
 
 		#header input[type="submit"],
@@ -2763,7 +2748,7 @@ input, select, textarea {
 		}
 
 		#header .logo {
-			background: #4eb980;
+			background: #4a5d4f;
 			border-radius: 100%;
 			color: #ffffff;
 			cursor: default;
@@ -2776,7 +2761,7 @@ input, select, textarea {
 			width: 2.35em;
 		}
 
-			#header .logo.fa-paper-plane-o:before {
+			#header .logo.fa-archway-o:before {
 				left: -0.075em;
 				position: relative;
 			}
@@ -2796,7 +2781,7 @@ input, select, textarea {
 
 	#footer {
 		background-attachment: scroll;
-		background-color: #4eb980;
+		background-color: #2e2c2a;
 		background-image: url("images/bottom-3200.svg");
 		background-position: top center;
 		background-repeat: repeat-x;
@@ -3021,19 +3006,13 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				background-attachment: scroll,							scroll,							scroll;
-				background-image: url("images/top-1600.svg"), url("images/overlay.png"), url("../../images/header.jpg");
-				background-size: 1600px 230px,					auto,							cover;
+				background-color: #f6f5f1;
+				background-image: url("images/top-1600.svg");
+				background-position: bottom center;
+				background-repeat: repeat-x;
+				background-size: 1600px 230px;
 				padding: 6em 0 12em 0;
 			}
-
-				#header:before {
-					height: calc(100% - 25px);
-				}
-
-				#header:after {
-					height: 25px;
-				}
 
 				#header h1 {
 					font-size: 2em;
@@ -3174,18 +3153,13 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				background-image: url("images/top-1280.svg"), url("images/overlay.png"), url("../../images/header.jpg");
-				background-size: 1280px 184px,						auto,							cover;
+				background-color: #f6f5f1;
+				background-image: url("images/top-1280.svg");
+				background-position: bottom center;
+				background-repeat: repeat-x;
+				background-size: 1280px 184px;
 				padding: 3em 0 7em 0;
 			}
-
-				#header:before {
-					height: calc(100% - 20px);
-				}
-
-				#header:after {
-					height: 20px;
-				}
 
 				#header .logo {
 					font-size: 1.5em;

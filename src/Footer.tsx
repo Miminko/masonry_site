@@ -1,15 +1,15 @@
-
 function Footer() {
   return (
     <div id="footer">
       <div className="container medium">
-
         <header className="major last">
           <h2>Questions or comments?</h2>
         </header>
 
-        <p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor
-        orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus.</p>
+        <p>
+          Send a message about restoration, new stonework, or site visits.
+          We will respond as soon as we can.
+        </p>
 
         <form method="post" action="#">
           <div className="row">
@@ -31,20 +31,22 @@ function Footer() {
         </form>
 
         <ul className="icons">
-          <li><a href="#" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
-          <li><a href="#" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
-          <li><a href="#" className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
-          <li><a href="#" className="icon brands fa-github"><span className="label">Github</span></a></li>
-          <li><a href="#" className="icon brands fa-dribbble"><span className="label">Dribbble</span></a></li>
+          <li>
+            <a href="#" className="icon brands fa-instagram">
+              <span className="label">Instagram</span>
+            </a>
+          </li>
         </ul>
 
         <ul className="copyright">
-          <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          <li>&copy; Ryan Eavis. All rights reserved.</li>
+          <li>
+            Design: <a href="https://html5up.net">HTML5 UP</a>
+          </li>
         </ul>
-
       </div>
     </div>
-  );
+  )
 }
 
 export default Footer
