@@ -2705,38 +2705,54 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		background-attachment: scroll;
-		background-color: #f6f5f1;
-		background-image: url("images/top-3200.svg");
-		background-position: bottom center;
-		background-repeat: repeat-x;
-		background-size: 3200px 460px;
-		color: #5c5a56;
+		background-attachment: fixed;
+		background-color: #2e2c2a;
+		background-image: url("../../images/stone-walkway-header.jpeg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: rgba(255, 255, 255, 0.9);
 		padding: 10em 0 20em 0;
 		position: relative;
 		text-align: center;
 	}
 
-		#header:before, #header:after {
+		#header:before {
+			background: rgba(30, 28, 26, 0.65);
+			content: '';
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 0;
+		}
+
+		#header:after {
 			display: none;
 		}
 
+		#header > * {
+			position: relative;
+			z-index: 1;
+		}
+
 		#header a {
-			border-bottom-color: rgba(74, 93, 79, 0.35);
-			color: #4a5d4f;
+			border-bottom-color: rgba(255, 255, 255, 0.35);
+			color: rgba(255, 255, 255, 0.9);
 		}
 
 			#header a:hover {
 				border-bottom-color: transparent;
-				color: #6b7f6e;
+				color: #ffffff;
 			}
 
 		#header strong, #header b {
-			color: #2e2c2a;
+			color: #ffffff;
 		}
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
-			color: #2e2c2a;
+			color: #ffffff;
 		}
 
 		#header input[type="submit"],
@@ -2782,32 +2798,16 @@ input, select, textarea {
 	#footer {
 		background-attachment: scroll;
 		background-color: #2e2c2a;
-		background-image: url("images/bottom-3200.svg");
-		background-position: top center;
-		background-repeat: repeat-x;
-		background-size: 3200px 460px;
+		background-image: none;
 		color: rgba(255, 255, 255, 0.8);
-		/*
-				Since the SVG background occupies a lot of vertical space, we'll
-				add additional top padding (to move our content out of its way)
-				and a negative margin (to move everything up a bit).
-			*/
-
-		margin-top: -260px;
-		padding: calc(460px + 6em) 0 10em 0;
+		margin-top: 0;
+		padding: 4em 0 6em 0;
 		position: relative;
 		text-align: center;
 	}
 
 		#footer:before {
-			background: rgba(224, 224, 224, 0.75);
-			content: '';
-			height: calc(460px + 6em);
-			left: 50%;
-			position: absolute;
-			top: 0;
-			width: 1px;
-			z-index: 0;
+			display: none;
 		}
 
 		#footer a {
@@ -2890,10 +2890,16 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		padding: 6em 0 5em 0;
+		background-color: #f6f5f1;
+		padding: 6em 0 6em 0;
 		position: relative;
 		z-index: 1;
 	}
+
+		#main .box.alt.container {
+			margin-bottom: 0;
+			padding-bottom: 2em;
+		}
 
 		#main:before {
 			background: rgba(224, 224, 224, 0.75);
@@ -3006,11 +3012,6 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				background-color: #f6f5f1;
-				background-image: url("images/top-1600.svg");
-				background-position: bottom center;
-				background-repeat: repeat-x;
-				background-size: 1600px 230px;
 				padding: 6em 0 12em 0;
 			}
 
@@ -3025,15 +3026,9 @@ input, select, textarea {
 		/* Footer */
 
 			#footer {
-				background-image: url("images/bottom-1600.svg");
-				background-size: 1600px 230px;
-				margin-top: -100px;
-				padding: calc(230px + 4em) 0 6em 0;
+				margin-top: 0;
+				padding: 4em 0 5em 0;
 			}
-
-				#footer:before {
-					height: calc(230px + 4em);
-				}
 
 		/* Main */
 
@@ -3153,11 +3148,7 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				background-color: #f6f5f1;
-				background-image: url("images/top-1280.svg");
-				background-position: bottom center;
-				background-repeat: repeat-x;
-				background-size: 1280px 184px;
+				background-attachment: scroll;
 				padding: 3em 0 7em 0;
 			}
 
@@ -3176,15 +3167,9 @@ input, select, textarea {
 		/* Footer */
 
 			#footer {
-				background-image: url("images/bottom-1280.svg");
-				background-size: 1280px 184px;
-				margin-top: -75px;
-				padding: calc(184px + 2em) 0 2em 0;
+				margin-top: 0;
+				padding: 3em 0 3em 0;
 			}
-
-				#footer:before {
-					height: calc(184px + 2em);
-				}
 
 				#footer form {
 					padding-bottom: 0;
@@ -3250,7 +3235,7 @@ input, select, textarea {
 		/* Footer */
 
 			#footer {
-				margin-top: -100px;
+				margin-top: 0;
 				padding-left: 1em;
 				padding-right: 1em;
 			}

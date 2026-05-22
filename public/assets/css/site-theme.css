@@ -98,19 +98,41 @@ textarea:focus {
   width: 100%;
 }
 
-/* Header — template angular SVG, no center guide lines */
+/* Header — fixed photo, dark overlay, white text; main scrolls over */
 
-#header:before,
+#header {
+  background-attachment: fixed !important;
+  background-image: url("../../images/stone-walkway-header.jpeg") !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+#header:before {
+  background: rgba(30, 28, 26, 0.65) !important;
+  display: block !important;
+  height: 100% !important;
+  left: 0 !important;
+  opacity: 1 !important;
+  top: 0 !important;
+  width: 100% !important;
+}
+
 #header:after {
   display: none !important;
 }
 
+#header > * {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
 #header a {
-  color: var(--stone-moss) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 #header a:hover {
-  color: var(--stone-moss-hover) !important;
+  color: #ffffff !important;
 }
 
 #header h1,
@@ -122,7 +144,7 @@ textarea:focus {
 #header p,
 #header strong,
 #header b {
-  color: var(--stone-heading) !important;
+  color: #ffffff !important;
 }
 
 #header .logo {
@@ -135,6 +157,22 @@ textarea:focus {
 #header input[type="button"],
 #header .button {
   color: var(--stone-heading) !important;
+}
+
+#main {
+  background-color: var(--stone-bg) !important;
+}
+
+#footer {
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 736px) {
+  /* fixed backgrounds are unreliable on many mobile browsers */
+  #header {
+    background-attachment: scroll !important;
+  }
 }
 
 /* Footer */
@@ -184,6 +222,13 @@ textarea:focus {
   }
 
   #footer {
+    margin-top: 0 !important;
     padding: 3em 0 3em 0 !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #footer {
+    margin-top: 0 !important;
   }
 }

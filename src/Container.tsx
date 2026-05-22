@@ -33,21 +33,6 @@ function Container() {
           </section>
         ))}
       </div>
-
-      <footer className="major container medium">
-        <h3>Discuss your project</h3>
-        <p>
-          Share plans, photos, or site details and we will follow up about scope,
-          timeline, and stone options.
-        </p>
-        <ul className="actions special">
-          <li>
-            <a href="#footer" className="button">
-              Get in touch
-            </a>
-          </li>
-        </ul>
-      </footer>
     </div>
   )
 }

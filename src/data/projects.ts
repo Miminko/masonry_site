@@ -7,9 +7,8 @@ export type ProjectFeature = {
   side: 'left' | 'right'
 }
 
-export const heroImage = '/images/ireland-stone-bridge.jpg'
-export const heroImageAlt =
-  'Traditional stone bridge masonry in Ireland'
+export const heroImage = '/images/stone-walkway-header.jpeg'
+export const heroImageAlt = 'Natural stone walkway and garden masonry'
 
 export const projectFeatures: ProjectFeature[] = [
   {
