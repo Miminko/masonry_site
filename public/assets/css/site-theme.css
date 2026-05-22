@@ -191,9 +191,6 @@ textarea:focus {
 #footer input[type="submit"],
 #footer input[type="reset"],
 #footer input[type="button"],
-#footer .button {
-  color: var(--stone-moss) !important;
-}
 
 #footer input[type="submit"]:hover,
 #footer input[type="reset"]:hover,

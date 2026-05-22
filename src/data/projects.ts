@@ -17,14 +17,14 @@ export const projectFeatures: ProjectFeature[] = [
       'Lime mortar repointing, structural repairs, and traditional techniques for churches and historic walls.',
     image: '/images/ballendaggin-church-wall.jpg',
     alt: 'Restored stone church wall in Ballendaggin',
-    icon: 'fa-monument',
+    icon: 'fa-church',
     side: 'left',
   },
   {
     title: 'Fireplaces & interior stone',
     description:
-      'Hand-cut natural stone fireplaces and interior features built for lasting character.',
-    image: '/images/stone-fireplace.jpeg',
+      'Hand-cut natural stone fireplaces, mantles, and interior features built for lasting character.',
+    image: '/images/rustic-fireplace.jpeg',
     alt: 'Hand-built stone fireplace',
     icon: 'fa-fire',
     side: 'right',
@@ -35,6 +35,24 @@ export const projectFeatures: ProjectFeature[] = [
       'Retaining walls, archways, and load-bearing stone construction using real stone throughout.',
     image: '/images/stone-archway.jpeg',
     alt: 'Stone archway construction',
+    icon: 'fa-dungeon',
+    side: 'left',
+  },
+  {
+    title: 'Pillars, stone patios & exterior builds',
+    description:
+      'Patios, walkways, pillars and more.',
+    image: '/images/house-patio.jpeg',
+    alt: 'Patio construction',
+    icon: 'fa-store-alt',
+    side: 'right',
+  },
+  {
+    title: 'Bridges & Stairs',
+    description:
+      'Large-scale projects on hills, over water, and even cantelever designs.',
+    image: '/images/dublin-doublearch-bridge.jpg',
+    alt: 'Dublin bridge construction',
     icon: 'fa-archway',
     side: 'left',
   },

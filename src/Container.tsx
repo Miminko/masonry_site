@@ -11,7 +11,7 @@ function Container() {
           in natural stone
         </h2>
         <p>
-          Ireland-trained craft for new builds, restoration,
+          Trained in Ireland for artisanal craft for new builds, traditional restoration,
           <br />
           and structural stone work.
         </p>

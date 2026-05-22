@@ -7,8 +7,7 @@ function Footer() {
         </header>
 
         <p>
-          Send a message about restoration, new stonework, or site visits.
-          We will respond as soon as we can.
+          Send a message about your project needs, and I'll get back to you as soon as I can.
         </p>
 
         <form method="post" action="#">
