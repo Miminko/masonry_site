@@ -1,7 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap");
 @import "tailwindcss";
 
-/* Layout and typography come from public/assets/css/main.css */
+@theme {
+  --color-stone-bg: #f6f5f1;
+  --color-stone-text: #5c5a56;
+  --color-stone-heading: #2e2c2a;
+  --color-stone-border: #c8c4bc;
+  --color-stone-moss: #4a5d4f;
+  --color-stone-moss-hover: #6b7f6e;
+  --color-stone-moss-dark: #3a4a3e;
+  --color-stone-footer: #2e2c2a;
+  --font-sans: "Source Sans Pro", ui-sans-serif, system-ui, sans-serif;
+}
 
-body {
-  margin: 0;
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100%;
+    -webkit-text-size-adjust: none;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--color-stone-text);
+    background-color: var(--color-stone-bg);
+  }
+
+  body.is-preload *,
+  body.is-preload *::before,
+  body.is-preload *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  a {
+    color: var(--color-stone-moss);
+    text-decoration: none;
+    border-bottom: 1px dotted currentColor;
+    transition:
+      color 0.2s ease-in-out,
+      border-color 0.2s ease-in-out;
+  }
+
+  a:hover {
+    color: var(--color-stone-moss-hover);
+    border-bottom-color: transparent;
+  }
+
+  strong,
+  b {
+    font-weight: 600;
+    color: var(--color-stone-heading);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-stone-heading);
+    font-weight: 700;
+    letter-spacing: 0.125em;
+    line-height: 1.75;
+    text-transform: uppercase;
+  }
+
+  input,
+  select,
+  textarea {
+    appearance: none;
+  }
 }

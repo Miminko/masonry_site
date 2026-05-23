@@ -14,14 +14,14 @@ export const projectFeatures: ProjectFeature[] = [
   {
     title: 'Heritage & restoration',
     description:
-      'Lime mortar repointing, structural repairs, and traditional techniques for churches and historic walls.',
+      'Lime mortar repointing, structural repairs, and traditional techniques for churches and historic architecture.',
     image: '/images/ballendaggin-church-wall.jpg',
     alt: 'Restored stone church wall in Ballendaggin',
     icon: 'fa-church',
     side: 'left',
   },
   {
-    title: 'Fireplaces & interior stone',
+    title: 'Fireplaces & interior projects',
     description:
       'Hand-cut natural stone fireplaces, mantles, and interior features built for lasting character.',
     image: '/images/rustic-fireplace.jpeg',
@@ -32,7 +32,7 @@ export const projectFeatures: ProjectFeature[] = [
   {
     title: 'Walls, arches & structural work',
     description:
-      'Retaining walls, archways, and load-bearing stone construction using real stone throughout.',
+      'Retaining walls, archways, and load-bearing stone construction using real timeless stone throughout.',
     image: '/images/stone-archway.jpeg',
     alt: 'Stone archway construction',
     icon: 'fa-dungeon',
