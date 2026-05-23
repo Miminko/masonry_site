@@ -13,17 +13,15 @@ function SiteCopyright({ variant = 'light' }: SiteCopyrightProps) {
       : 'border-0 text-inherit no-underline hover:text-white'
 
   return (
-    <ul
-      className={`flex list-none flex-wrap justify-center gap-x-4 gap-y-3 p-0 ${textClass}`}
-    >
+    <ul className={`flex list-none flex-wrap justify-center gap-x-4 gap-y-3 p-0 ${textClass}`}>
       <li>&copy; Ryan Eavis. All rights reserved.</li>
       <li>
         <Link to="/privacy" className={linkClass}>
           Privacy Policy
         </Link>
       </li>
-      <li className="before:mr-4 before:border-l before:border-dotted before:border-white/50 before:pl-4 before:content-[''] max-sm:before:hidden max-sm:pl-0">
-        Design:{' '}
+      <li className="before:content-[''] max-sm:before:hidden max-sm:pl-0">
+        Adapted from a template by{' '}
         <a
           href="https://html5up.net"
           target="_blank"

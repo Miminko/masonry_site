@@ -10,12 +10,12 @@ function Footer() {
       <div className="mx-auto max-w-[38.25em]">
         <header className="mb-8">
           <h2 className="mb-4 text-center text-3xl text-white">
-            Questions or comments?
+            Let's get in touch
           </h2>
         </header>
 
         <p className="mb-0">
-          Send a message about your project needs, and I&apos;ll get back to you
+          Send me a message about your project needs, and I&apos;ll get back to you
           as soon as I can.
         </p>
 
@@ -42,8 +42,8 @@ function Footer() {
               className={`${fieldClass} sm:col-span-2`}
             />
             <p className="text-left text-sm leading-relaxed text-white/70 sm:col-span-2">
-              By sending this form, you agree that we may use your name, email,
-              and message to respond to your inquiry, as described in our{' '}
+              By sending this form, you agree that I may use your name, email,
+              and message to respond to your inquiry, as described in the{' '}
               <Link
                 to="/privacy"
                 className="border-0 text-white underline decoration-white/40 underline-offset-2 hover:text-white hover:decoration-white"
@@ -56,7 +56,7 @@ function Footer() {
               <input
                 type="submit"
                 value="Send Message"
-                className="inline-block min-w-[15em] cursor-pointer rounded border-0 bg-white px-6 py-0 text-sm font-bold tracking-[0.125em] text-stone-moss uppercase transition-colors hover:bg-white/15 hover:text-white max-sm:w-full max-sm:leading-[3.25em]"
+                className="inline-block min-w-[15em] cursor-pointer rounded border-0 bg-white px-6 py-2 text-sm font-bold tracking-[0.125em] text-stone-moss uppercase transition-colors hover:bg-white/15 hover:text-white max-sm:w-full max-sm:leading-[3.25em]"
               />
             </div>
           </div>
