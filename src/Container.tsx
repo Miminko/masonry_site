@@ -67,7 +67,7 @@ function Container() {
                 />
                 <Icon
                   name={project.icon}
-                  className="pointer-events-none absolute top-1/2 left-1/2 z-10 h-16 w-16 -translate-x-1/2 -translate-y-1/2 text-white transition-transform duration-100 group-hover/image:scale-110"
+                  className="pointer-events-none absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-6xl text-white transition-transform duration-100 group-hover/image:scale-110 max-md:text-5xl"
                 />
                 {project.images.length > 1 && (
                   <span className="pointer-events-none absolute right-3 bottom-3 z-10 rounded bg-stone-footer/85 px-2 py-1 text-xs font-bold tracking-wider text-white uppercase">
