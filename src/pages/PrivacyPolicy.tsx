@@ -28,13 +28,15 @@ function PrivacyPolicy() {
         <section className={sectionClass}>
           <h2 className={headingClass}>Information I collect</h2>
           <p className={paragraphClass}>
-            <strong>Contact form.</strong> If you submit the contact form, we
+            <strong>Contact form.</strong> If you submit the contact form, I
             collect the information you provide: your name, email address, and
             message. I do not ask for more information than is needed to respond
             to your inquiry.
           </p>
-          No other personal information is collected automatically.
-          This website does not use cookies, tracking scripts, or advertising technologies.
+          <p className={paragraphClass}>
+            No other personal information is collected automatically.
+            This website does not use cookies, tracking scripts, or advertising technologies.
+          </p>
         </section>
 
         <section className={sectionClass}>
@@ -107,24 +109,9 @@ function PrivacyPolicy() {
             .
           </p>
           <p className={paragraphClass}>
-            <strong>Font Awesome (icons).</strong> Icons on this site are served
-            from our own hosting (self-hosted CSS and font files), not from the
-            Font Awesome CDN or Kit script. Loading icons from our server does
-            not send your visit to Fonticons, Inc. for icon delivery.
-          </p>
-          <p className={paragraphClass}>
-            If I later switch to Font Awesome&apos;s CDN or Kit, your browser may
-            contact Fonticons servers and Fonticons may collect technical or usage
-            data under their terms. I would update this policy if that changes.
-            See{' '}
-            <a
-              href="https://fontawesome.com/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Font Awesome&apos;s privacy information
-            </a>{' '}
-            for details about their services.
+            <strong>Icons.</strong> Decorative icons on this site use Font Awesome
+            graphics bundled with the site&apos;s own files. Loading them does not
+            contact Fonticons&apos; CDN or use their Kit script.
           </p>
           <p className={paragraphClass}>
             <strong>Social links.</strong> Links to Facebook, Instagram, or other
@@ -184,7 +171,7 @@ function PrivacyPolicy() {
       </article>
 
       <footer className="border-t border-stone-border/75 bg-stone-footer px-6 py-8">
-        <SiteCopyright variant="dark" />
+        <SiteCopyright />
       </footer>
     </div>
   )

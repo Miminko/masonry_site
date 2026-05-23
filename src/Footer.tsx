@@ -1,4 +1,5 @@
 import ContactForm from './components/ContactForm'
+import { Icon } from './components/Icon'
 import SiteCopyright from './components/SiteCopyright'
 
 function Footer() {
@@ -31,7 +32,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/30 text-xl text-white no-underline transition-colors hover:border-white hover:bg-white/15"
             >
-              <i className="fab fa-facebook-f not-italic" aria-hidden />
+              <Icon name="facebook" className="h-4 w-4" />
               <span className="sr-only">Cape Breton Strongman on Facebook</span>
             </a>
           </li>
@@ -42,7 +43,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/30 text-xl text-white no-underline transition-colors hover:border-white hover:bg-white/15"
             >
-              <i className="fab fa-instagram not-italic" aria-hidden />
+              <Icon name="instagram" className="h-4 w-4" />
               <span className="sr-only">Instagram</span>
             </a>
           </li>
