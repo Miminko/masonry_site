@@ -114,6 +114,20 @@ function PrivacyPolicy() {
             contact Fonticons&apos; CDN or use their Kit script.
           </p>
           <p className={paragraphClass}>
+            <strong>Hosting (Cloudflare).</strong> This site is hosted on
+            Cloudflare Pages. Cloudflare may process technical data such as your
+            IP address and browser information to deliver the site securely and
+            quickly. Cloudflare&apos;s privacy practices are described in{' '}
+            <a
+              href="https://www.cloudflare.com/privacypolicy/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Cloudflare&apos;s Privacy Policy
+            </a>
+            .
+          </p>
+          <p className={paragraphClass}>
             <strong>Social links.</strong> Links to Facebook, Instagram, or other
             platforms leave this site. Those platforms have their own privacy
             policies and may collect information about you when you use them.

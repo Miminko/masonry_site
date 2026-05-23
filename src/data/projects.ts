@@ -111,7 +111,7 @@ export const projectFeatures: ProjectFeature[] = [
         alt: 'Traditional stone bridge in Ireland',
       },
       {
-        src: '/images/cantelever-stairs.webp',
+        src: '/images/cantilever-stairs.webp',
         alt: 'Cantilever stone stairs',
       },
       {
