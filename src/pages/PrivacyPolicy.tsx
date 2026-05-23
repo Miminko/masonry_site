@@ -51,6 +51,29 @@ function PrivacyPolicy() {
         </section>
 
         <section className={sectionClass}>
+          <h2 className={headingClass}>Contact Form Processing (Formspree)</h2>
+          <p className={paragraphClass}>
+            When you submit a message through the contact form on this site, the
+            information you provide (your name, email address, and message) is
+            processed by Formspree, the service that delivers form submissions to
+            my email. Formspree temporarily handles your message for the sole
+            purpose of forwarding it to me. They do not use your information for
+            marketing or share it with third parties.
+          </p>
+          <p className={paragraphClass}>
+            You can read Formspree&apos;s privacy practices in their{' '}
+            <a
+              href="https://formspree.io/legal/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Privacy Policy
+            </a>
+            .
+          </p>
+        </section>
+
+        <section className={sectionClass}>
           <h2 className={headingClass}>Legal basis and consent</h2>
           <p className={paragraphClass}>
             By submitting the contact form after reading this policy, you consent
