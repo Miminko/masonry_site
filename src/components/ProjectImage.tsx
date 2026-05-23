@@ -3,7 +3,6 @@ type ProjectImageProps = {
   alt: string
 }
 
-/** Feature/gallery images — sizing handled in site-theme.css (.feature .image img) */
 export function ProjectImage({ src, alt }: ProjectImageProps) {
   return (
     <img
@@ -11,6 +10,7 @@ export function ProjectImage({ src, alt }: ProjectImageProps) {
       alt={alt}
       loading="lazy"
       decoding="async"
+      className="absolute inset-0 h-full w-full object-cover object-center"
     />
   )
 }
