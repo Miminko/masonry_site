@@ -1,19 +1,10 @@
 import { Link } from 'react-router-dom'
 
-type SiteCopyrightProps = {
-  variant?: 'light' | 'dark'
-}
+const linkClass = 'border-0 text-inherit no-underline hover:text-white'
 
-function SiteCopyright({ variant = 'light' }: SiteCopyrightProps) {
-  const textClass =
-    variant === 'dark' ? 'text-white/50' : 'text-sm text-white/50'
-  const linkClass =
-    variant === 'dark'
-      ? 'border-0 text-inherit no-underline hover:text-white'
-      : 'border-0 text-inherit no-underline hover:text-white'
-
+function SiteCopyright() {
   return (
-    <ul className={`flex list-none flex-wrap justify-center gap-x-4 gap-y-3 p-0 ${textClass}`}>
+    <ul className="flex list-none flex-wrap justify-center gap-x-4 gap-y-3 p-0 text-sm text-white/50">
       <li>&copy; Ryan Eavis. All rights reserved.</li>
       <li>
         <Link to="/privacy" className={linkClass}>

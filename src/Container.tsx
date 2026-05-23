@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Icon } from './components/Icon'
 import { ProjectImage } from './components/ProjectImage'
 import ProjectGalleryModal from './components/ProjectGalleryModal'
 import { projectFeatures } from './data/projects'
@@ -29,7 +30,7 @@ function Container() {
           aria-hidden
         />
         <h2 className="mb-0 text-center text-3xl text-stone-heading max-md:text-2xl">
-          Artisinal masonry
+          Artisanal masonry
         </h2>
         <h2 className="mb-0 text-center text-3xl text-stone-heading max-md:text-2xl">
           in natural stone
@@ -64,9 +65,9 @@ function Container() {
                   className="pointer-events-none absolute inset-0 bg-black/30 opacity-40 transition-opacity group-hover/image:opacity-60"
                   aria-hidden
                 />
-                <i
-                  className={`fas ${project.icon} pointer-events-none absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-6xl text-white transition-transform duration-100 group-hover/image:scale-110 not-italic`}
-                  aria-hidden
+                <Icon
+                  name={project.icon}
+                  className="pointer-events-none absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-6xl text-white transition-transform duration-100 group-hover/image:scale-110 max-md:text-5xl"
                 />
                 {project.images.length > 1 && (
                   <span className="pointer-events-none absolute right-3 bottom-3 z-10 rounded bg-stone-footer/85 px-2 py-1 text-xs font-bold tracking-wider text-white uppercase">

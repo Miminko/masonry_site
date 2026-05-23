@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 const FORMSPREE_FORM_ID = 'xaqkbpqo'
 
+const labelClass = 'mb-1 block text-left text-sm text-white/80'
 const fieldClass =
   'w-full rounded border border-white/30 bg-transparent px-3 py-3 text-inherit outline-none transition-colors placeholder:text-white/50 focus:border-white focus:bg-white/10'
 
@@ -30,7 +31,11 @@ function ContactForm() {
     <form onSubmit={handleSubmit} className="my-12" noValidate>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <div>
+          <label htmlFor="contact-name" className={labelClass}>
+            Name
+          </label>
           <input
+            id="contact-name"
             type="text"
             name="name"
             placeholder="Name"
@@ -47,7 +52,11 @@ function ContactForm() {
           />
         </div>
         <div>
+          <label htmlFor="contact-email" className={labelClass}>
+            Email
+          </label>
           <input
+            id="contact-email"
             type="email"
             name="email"
             placeholder="Email"
@@ -64,7 +73,11 @@ function ContactForm() {
           />
         </div>
         <div className="sm:col-span-2">
+          <label htmlFor="contact-message" className={labelClass}>
+            Message
+          </label>
           <textarea
+            id="contact-message"
             name="message"
             placeholder="Message"
             rows={6}

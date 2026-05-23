@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { Icon } from './Icon'
 import type { ProjectImage } from '../data/projects'
 
 type ProjectGalleryModalProps = {
@@ -8,12 +9,16 @@ type ProjectGalleryModalProps = {
   onClose: () => void
 }
 
+const FOCUSABLE =
+  'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+
 function ProjectGalleryModal({
   title,
   images,
   initialIndex,
   onClose,
 }: ProjectGalleryModalProps) {
+  const modalRef = useRef<HTMLDivElement>(null)
   const closeButtonRef = useRef<HTMLButtonElement>(null)
   const [activeIndex, setActiveIndex] = useState(initialIndex)
 
@@ -46,6 +51,22 @@ function ProjectGalleryModal({
         goToPrevious()
       } else if (event.key === 'ArrowRight') {
         goToNext()
+      } else if (event.key === 'Tab' && modalRef.current) {
+        const focusable = Array.from(
+          modalRef.current.querySelectorAll<HTMLElement>(FOCUSABLE),
+        )
+        if (focusable.length === 0) return
+
+        const first = focusable[0]
+        const last = focusable[focusable.length - 1]
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault()
+          last.focus()
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault()
+          first.focus()
+        }
       }
     }
 
@@ -62,6 +83,7 @@ function ProjectGalleryModal({
 
   return (
     <div
+      ref={modalRef}
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
       role="presentation"
     >
@@ -101,7 +123,7 @@ function ProjectGalleryModal({
             className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/30 bg-stone-footer text-xl text-white no-underline transition-colors hover:bg-white/15"
             aria-label="Close gallery"
           >
-            <i className="fas fa-times not-italic" aria-hidden />
+            <Icon name="times" className="h-4 w-4" />
           </button>
         </div>
 
@@ -121,7 +143,7 @@ function ProjectGalleryModal({
                 className="absolute top-1/2 left-2 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-stone-footer/90 text-lg text-white no-underline transition-colors hover:bg-stone-moss max-sm:left-1 max-sm:h-9 max-sm:w-9"
                 aria-label="Previous image"
               >
-                <i className="fas fa-chevron-left not-italic" aria-hidden />
+                <Icon name="chevron-left" className="h-4 w-4" />
               </button>
               <button
                 type="button"
@@ -129,7 +151,7 @@ function ProjectGalleryModal({
                 className="absolute top-1/2 right-2 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-stone-footer/90 text-lg text-white no-underline transition-colors hover:bg-stone-moss max-sm:right-1 max-sm:h-9 max-sm:w-9"
                 aria-label="Next image"
               >
-                <i className="fas fa-chevron-right not-italic" aria-hidden />
+                <Icon name="chevron-right" className="h-4 w-4" />
               </button>
             </>
           )}

@@ -1,95 +1,59 @@
 # Eavis Masonry Homepage
 
-This project is a lightweight single page application built with React + Vite + Tailwind CSS.
+Marketing site for Ryan Eavis Traditional Stonemasonry, built with React, Vite, and Tailwind CSS.
 
-# Init & Install Steps
-1. Setup SSH keys for Github
-2. Install homebrew, node, npm, vite
-3. Init repo and push to remote
-4. Init starter template with:
-```
-npm create vite@latest . -- --template react-ts
-npm install tailwindcss @tailwindcss/vite
-npm install react-router-dom
-```
-5. Update the corresponding files with the imports
-5. Build/run with:
-```
-npm run build
+## Development
+
+```bash
+npm install
+cp .env.example .env   # optional for local dev
 npm run dev
 ```
-6. `dist/` folder is for publishing
 
-# React + TypeScript + Vite
+## Build
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The production output is written to `dist/`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+For production builds, set your live site URL (no trailing slash):
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+VITE_SITE_URL=https://eavisstone.ca npm run build
 ```
+
+On Cloudflare Pages, add `VITE_SITE_URL` as an environment variable in **Settings → Environment variables** so canonical URLs, Open Graph tags, `robots.txt`, and `sitemap.xml` are generated correctly.
+
+## Deployment (Cloudflare Pages)
+
+This is a client-side routed SPA deployed as static files.
+
+| Setting | Value |
+|---------|-------|
+| Build command | `npm run build` |
+| Build output directory | `dist` |
+| Node version | `22` (set `NODE_VERSION=22` in environment variables) |
+| Site URL | `VITE_SITE_URL=https://eavisstone.ca` |
+
+Included in the repo:
+
+- `public/_redirects` — SPA fallback (`/* → /index.html`) for direct loads of `/privacy`
+- `public/_headers` — cache rules for `/assets/` and `/images/`, plus basic security headers
+
+Set `VITE_SITE_URL=https://eavisstone.ca` in Cloudflare Pages environment variables (Production) so builds generate the correct canonical URLs, Open Graph tags, `robots.txt`, and `sitemap.xml`.
+
+## Images
+
+Project photos live in `public/images/`. Keep file sizes web-friendly (roughly under 300 KB each where possible) for faster loads on mobile connections. Several gallery images are still larger than ideal — re-export at max ~1600px wide if load times feel slow.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start the Vite dev server |
+| `npm run build` | Type-check and build for production |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
