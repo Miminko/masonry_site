@@ -1,7 +1,6 @@
 import { heroImage } from './data/projects'
 
-const sydneyMapUrl =
-  'https://www.google.com/maps/place/Sydney,+NS,+Canada/@46.1365,-60.1942,11z'
+const sydneyMapUrl = 'https://www.google.com/maps/place/Sydney,+NS,+Canada/@46.1365,-60.1942,11z'
 
 function Header() {
   return (
