@@ -4,7 +4,7 @@ import { projectFeatures } from './data/projects'
 function Container() {
   return (
     <main className="relative z-10 bg-stone-bg py-24 before:pointer-events-none before:absolute before:top-0 before:left-1/2 before:-z-10 before:h-full before:w-px before:bg-stone-border/75 max-md:py-8 max-sm:px-4">
-      <header className="relative mx-auto mb-24 max-w-[38.25em] border-y border-stone-border/75 px-6 py-16 text-center max-md:mb-12 max-md:py-12">
+      <header className="relative z-10 mx-auto mb-24 max-w-[38.25em] border-y border-stone-border/75 bg-white px-6 py-16 text-center max-md:mb-12 max-md:py-12">
         <span
           className="pointer-events-none absolute top-2.5 right-0 left-0 block h-px bg-stone-border/75"
           aria-hidden

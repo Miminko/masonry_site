@@ -26,10 +26,12 @@ function Header() {
         <p className="mx-auto mt-1 max-w-3xl text-center text-2xl leading-snug text-white max-md:text-xl max-sm:text-base">
           Currently based in Cape Breton, Nova Scotia.
         </p>
-        <i
-          className="fas fa-map-marker-alt mt-3 inline-flex h-[2.35em] w-[2.35em] cursor-default items-center justify-center rounded-full bg-stone-moss text-[2.25em] leading-none text-white not-italic max-md:text-2xl"
+        <span
+          className="mt-3 inline-grid h-[2.35em] w-[2.35em] cursor-default place-items-center rounded-full bg-stone-moss text-[2.25em] leading-none max-md:text-2xl"
           aria-hidden
-        />
+        >
+          <i className="fas fa-map-marker-alt text-white not-italic" />
+        </span>
       </div>
     </header>
   )

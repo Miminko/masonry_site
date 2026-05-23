@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom'
+import SiteCopyright from './components/SiteCopyright'
+
 const fieldClass =
   'w-full rounded border border-white/30 bg-transparent px-3 py-3 text-inherit outline-none transition-colors placeholder:text-white/50 focus:border-white focus:bg-white/10'
 
@@ -22,12 +25,14 @@ function Footer() {
               type="text"
               name="name"
               placeholder="Name"
+              autoComplete="name"
               className={fieldClass}
             />
             <input
               type="email"
               name="email"
               placeholder="Email"
+              autoComplete="email"
               className={fieldClass}
             />
             <textarea
@@ -36,6 +41,17 @@ function Footer() {
               rows={6}
               className={`${fieldClass} sm:col-span-2`}
             />
+            <p className="text-left text-sm leading-relaxed text-white/70 sm:col-span-2">
+              By sending this form, you agree that we may use your name, email,
+              and message to respond to your inquiry, as described in our{' '}
+              <Link
+                to="/privacy"
+                className="border-0 text-white underline decoration-white/40 underline-offset-2 hover:text-white hover:decoration-white"
+              >
+                Privacy Policy
+              </Link>
+              .
+            </p>
             <div className="sm:col-span-2">
               <input
                 type="submit"
@@ -72,18 +88,9 @@ function Footer() {
           </li>
         </ul>
 
-        <ul className="mt-12 flex list-none flex-wrap justify-center gap-x-4 gap-y-3 p-0 text-sm text-white/50">
-          <li>&copy; Ryan Eavis. All rights reserved.</li>
-          <li className="before:mr-4 before:border-l before:border-dotted before:border-white/50 before:pl-4 max-sm:before:hidden max-sm:pl-0">
-            Design:{' '}
-            <a
-              href="https://html5up.net"
-              className="border-0 text-inherit no-underline hover:text-white"
-            >
-              HTML5 UP
-            </a>
-          </li>
-        </ul>
+        <div className="mt-12">
+          <SiteCopyright />
+        </div>
       </div>
     </footer>
   )
