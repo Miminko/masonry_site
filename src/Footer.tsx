@@ -2,6 +2,10 @@ import ContactForm from './components/ContactForm'
 import { Icon } from './components/Icon'
 import SiteCopyright from './components/SiteCopyright'
 
+const phoneNumber = import.meta.env.VITE_PHONE_NUMBER
+const phoneLinkClass =
+  'border-0 text-white no-underline underline-offset-2 hover:text-white hover:underline'
+
 function Footer() {
   return (
     <footer className="relative z-10 bg-stone-footer px-6 py-16 pb-24 text-center text-white/80 max-md:py-12 max-md:pb-12">
@@ -13,8 +17,21 @@ function Footer() {
         </header>
 
         <p className="mb-0">
-          Send me a message about your project needs, and I&apos;ll get back to you
-          as soon as I can.
+          {phoneNumber ? (
+            <>
+              Call me at{' '}
+              <a href={`tel:${phoneNumber}`} className={phoneLinkClass}>
+                {phoneNumber}
+              </a>{' '}
+              or send me a message about your project needs, and I&apos;ll get back to you
+              as soon as I can.
+            </>
+          ) : (
+            <>
+              Send me a message about your project needs, and I&apos;ll get back to you
+              as soon as I can.
+            </>
+          )}
         </p>
 
         <ContactForm />
